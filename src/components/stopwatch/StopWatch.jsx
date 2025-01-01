@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import Display from "../Display";
-import BtnDisplay from "../BtnDisplay";
+import Display from "./Display";
+import BtnDisplay from "./BtnDisplay";
+import "./styles.css";
 
 function Stopwatch() {
   const [time, setTime] = useState({ ms: 0, s: 0, m: 0, h: 0 });
@@ -50,17 +51,19 @@ function Stopwatch() {
 
   return (
     <>
-      <h2>Stopwatch</h2>
-      <div className="clock-holder">
-        <div className="stopwatch">
-          <Display time={time} />
-          <BtnDisplay
-            status={status}
-            start={start}
-            stop={stop}
-            resume={resume}
-            reset={reset}
-          />
+      <div className="main-section">
+        <div className="clock-holder">
+          <h2 className="section-title">Stopwatch</h2>
+          <div className="stopwatch">
+            <Display time={time} />
+            <BtnDisplay
+              status={status}
+              start={start}
+              stop={stop}
+              resume={resume}
+              reset={reset}
+            />
+          </div>
         </div>
       </div>
     </>

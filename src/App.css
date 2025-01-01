@@ -9,6 +9,44 @@ body {
   box-sizing: border-box;
 }
 
+/*? NavBar =================================*/
+.nav-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.mainTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: .5em 0;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  margin: 1em 0;
+  padding: 0 5em;
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  margin: 0 1em;
+  border-radius: 2em;
+  width: 20%;
+  color: #fff;
+  background-color: #131313;
+}
+
+.nav-link:hover {
+  color: #2C3E50;
+  background-color: #00ABA9;
+}
+
 .main-section {
   background: transparent;
   max-width: 1600px;
@@ -17,71 +55,15 @@ body {
   margin: 30px auto;
 }
 
+.section-title {
+  padding: 1em 0 0 1em;
+  color: #000000;
+}
+
 .clock-holder {
   width: 100%;
-  background: #fff;
+  background: #f5f5f5;
   margin: 30px auto;
   position: relative;
-}
-
-.stopwatch {
-  padding: 60px 0px;
-  text-align: center;
-}
-
-.stopwatch span {
-  background: #00ABA9;
-  color: #fff;
-  display: inline-block;
-  font-family: monospace;
-  font-size: 22px;
-  padding: 20px;
-  border-radius: 5px;
-  width: 70px;
-}
-
-.stopwatch .stopwatch-btn {
-  background: #fff;
-  margin-top: 30px;
-  margin-left: 5px;
-  border: none;
-  padding: 12px 20px;
-  font-size: 16px;
-  text-transform: uppercase;
-  width: 150px;
-  transition: background 1s;
-  cursor: pointer;
-}
-
-.stopwatch .stopwatch-btn-red {
-  border: 2px solid #C85454;
-  color: #C85454;
-}
-
-.stopwatch .stopwatch-btn-yel {
-  border: 2px solid #FFC900;
-  color: #FFC900;
-}
-
-.stopwatch .stopwatch-btn-gre {
-  border: 2px solid #00ABA9;
-  color: #00ABA9;
-}
-
-.stopwatch .stopwatch-btn-red:hover {
-  background: #C85454;
-  border: 2px solid #C85454;
-  color: #fff;
-}
-
-.stopwatch .stopwatch-btn-yel:hover {
-  background: #FFC900;
-  border: 2px solid #FFC900;
-  color: #fff;
-}
-
-.stopwatch .stopwatch-btn-gre:hover {
-  background: #00ABA9;
-  border: 2px solid #00ABA9;
-  color: #fff;
+  border-radius: 0 0 1em 1em;
 }

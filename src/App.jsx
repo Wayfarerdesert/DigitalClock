@@ -1,18 +1,22 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import React from "react";
-import Stopwatch from "./components/layout/StopWatch";
+import Navbar from "./components/layout/Navbar";
+import Clock from "./components/clock/Clock";
+import Stopwatch from "./components/stopwatch/StopWatch";
+import Timer from "./components/timer/Timer";
 
 function App() {
   return (
     <>
-      <div className="main-section">
-        <h1>Digital Clock</h1>
-        <div>
-          <div>
-            <Stopwatch />
-          </div>
-        </div>
-      </div>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/clock" element={<Clock />} />
+          <Route path="/stopwatch" element={<Stopwatch />} />
+          <Route path="/timer" element={<Timer />} />
+        </Routes>
+      </Router>
     </>
   );
 }
