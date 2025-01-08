@@ -1,0 +1,65 @@
+.wrap {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    font-weight: bold;
+    /* background-color: red; */
+}
+
+.widget {
+    width: 40%;
+    margin: 4em auto;
+}
+
+/* .widget>.date>.day,
+.widget>.date>.dayNum,
+.widget>.date>.month,
+.widget>.date>.year {
+    display: inline-block;
+    line-height: 1em;
+} */
+
+.date,
+.clock {
+    display: flex;
+    /* align-items: center; */
+    gap: 0.5rem;
+}
+
+.separator {
+    margin-left: -0.5em;
+    margin-right: 0.5em;
+}
+
+.date {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: .3rem;
+    background-color: rgba(0, 0, 0, .5);
+    background-color: #00ABA9;
+    padding: 20px;
+    width: 100%;
+    border-radius: .3em .3em 0 0;
+}
+
+.clock {
+    width: 100%;
+    padding: 0 .6em;
+    font-size: 4em;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .5);
+    background-color: #00ABA9;
+}
+
+.clock .seconds,
+.clock .amPm {
+    font-size: 2rem;
+}
+
+.clock .amPm {
+    margin-top: 0.3em;
+}
+
+.clock .seconds {
+    margin-top: -0.5em;
+}
