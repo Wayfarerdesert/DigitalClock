@@ -3,7 +3,6 @@
     max-width: 1000px;
     margin: auto;
     font-weight: bold;
-    /* background-color: red; */
 }
 
 .widget {
@@ -11,18 +10,20 @@
     margin: 4em auto;
 }
 
-/* .widget>.date>.day,
-.widget>.date>.dayNum,
-.widget>.date>.month,
-.widget>.date>.year {
-    display: inline-block;
-    line-height: 1em;
-} */
+.hourFormater {
+    width: 13%;
+    margin-left: 1.5em;
+    border: none;
+}
+
+.hourFormater:hover {
+    color: #2C3E50;
+    background-color: #00ABA9;
+}
 
 .date,
 .clock {
     display: flex;
-    /* align-items: center; */
     gap: 0.5rem;
 }
 
@@ -61,5 +62,47 @@
 }
 
 .clock .seconds {
-    margin-top: -0.5em;
+    margin-top: -.5em;
+}
+
+.hsFormat {
+    font-size: 1em !important;
+    padding-top: .5em;
+}
+
+.hide {
+    display: none;
+}
+
+@media only screen and (max-width: 950px) {
+    .hourFormater {
+        width: 30%;
+    }
+
+    .widget {
+        width: 65%;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .hourFormater {
+        width: 50%;
+    }
+
+    .widget {
+        width: 100%;
+    }
+
+    .date {
+        font-size: 1em;
+    }
+
+    .clock {
+        font-size: 3em;
+    }
+
+    .clock .seconds,
+    .clock .amPm {
+        font-size: 1.5rem;
+    }
 }

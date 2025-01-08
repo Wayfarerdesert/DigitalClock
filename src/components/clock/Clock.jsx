@@ -1,8 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 import "./styles.css";
 
 function Clock() {
+  const [is24Hours, setIs24Hours] = useState(true);
+
   var updateClock = function () {
     var now = new Date(),
       hours = now.getHours(),
@@ -58,12 +60,18 @@ function Clock() {
     if (pHours) {
       let displayHours;
 
-      if (hours === 0) {
-        displayHours = "00"; // Midnight
-      } else if (hours === 12) {
-        displayHours = "12"; // Noon
+      if (is24Hours) {
+        // 24-hour format
+        displayHours = hours.toString().padStart(2, "0");
       } else {
-        displayHours = (hours % 12).toString().padStart(2, "0");
+        // 12-hour format
+        if (hours === 0) {
+          displayHours = "12"; // Midnight
+        } else if (hours === 12) {
+          displayHours = "12"; // Noon
+        } else {
+          displayHours = (hours % 12).toString().padStart(2, "0");
+        }
       }
 
       pHours.innerHTML = displayHours;
@@ -71,18 +79,38 @@ function Clock() {
 
     if (pMinutes) pMinutes.innerHTML = minutes.toString().padStart(2, "0");
     if (pSeconds) pSeconds.innerHTML = seconds.toString().padStart(2, "0");
-    if (pAmPm) pAmPm.innerHTML = amPm;
+    if (!is24Hours && pAmPm) {
+      pAmPm.innerHTML = amPm;
+    } else if (pAmPm) {
+      pAmPm.innerHTML = "";
+    }
+    if (pSeconds) {
+      if (is24Hours) {
+        pSeconds.classList.add("hsFormat");
+        pAmPm.classList.add("hide");
+      } else {
+        pSeconds.classList.remove("hsFormat");
+        pAmPm.classList.remove("hide");
+      }
+    }
   };
 
-  updateClock();
-  var interval = setInterval(updateClock, 1000);
-  interval;
+  useEffect(() => {
+    const interval = setInterval(updateClock, 1000);
+    return () => clearInterval(interval);
+  }, [is24Hours]);
 
   return (
     <>
       <div className="main-section">
         <div className="clock-holder">
           <h2 className="section-title">Clock</h2>
+          <button
+            className="hourFormater"
+            onClick={() => setIs24Hours((prev) => !prev)}
+          >
+            Toggle {is24Hours ? "12-Hour" : "24-Hour"}
+          </button>
           <div className="wrap">
             <div className="widget">
               <div className="date">
