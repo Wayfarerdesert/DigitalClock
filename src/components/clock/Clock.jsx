@@ -111,7 +111,7 @@ function Clock() {
           >
             Toggle {is24Hours ? "12-Hour" : "24-Hour"}
           </button>
-          <div className="wrap">
+          <div className="clockWrap">
             <div className="widget">
               <div className="date">
                 <div id="day" className="day">

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Display from "./Display";
-import BtnDisplay from "./BtnDisplay";
+import BtnDisplay from "../layout/BtnDisplay";
 import "./styles.css";
 
 function Stopwatch() {

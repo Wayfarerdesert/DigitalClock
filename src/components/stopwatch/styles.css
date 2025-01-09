@@ -1,5 +1,5 @@
 .stopwatch {
-    padding: 60px 0px;
+    padding: 50px 0px;
     text-align: center;
 }
 
@@ -7,11 +7,11 @@
     background: #00ABA9;
     color: #fff;
     display: inline-block;
-    font-family: monospace;
-    font-size: 22px;
-    padding: 20px;
+    font-size: 4em;
+    font-weight: bold;
+    margin-top: .2em;
     border-radius: 5px;
-    width: 70px;
+    width: 120px;
 }
 
 .stopwatch .stopwatch-btn {
@@ -58,4 +58,16 @@
     background: #00ABA9;
     border: 2px solid #00ABA9;
     color: #fff;
+}
+
+@media only screen and (max-width: 414px) {
+    .stopwatch {
+        padding: 40px 0px;
+        text-align: center;
+    }
+
+    .stopwatch span {
+        font-size: 2em;
+        width: 80px;
+    }
 }

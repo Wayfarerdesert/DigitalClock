@@ -1,0 +1,119 @@
+.timer {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.timerBox {
+    display: flex;
+    width: 100%;
+    padding: 0 .6em;
+    font-size: 4em;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .5);
+    background-color: #00ABA9;
+}
+
+.time-input-field {
+    font-size: 1em;
+    text-align: center;
+    font-weight: bold;
+    border: none;
+    background-color: #00ABA9;
+}
+
+.dots {
+    width: 30%;
+}
+
+.time-input-field:disabled {
+    color: #fff;
+    -moz-appearance: textfield;
+}
+
+/* Style spinner buttons in Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+    /* Removes default Firefox styling */
+}
+
+.timerControls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 2em auto;
+    padding: 0 2em .5em 2em;
+}
+
+.stopwatch-btns {
+    display: flex;
+    gap: 1em;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.timerControls .stopwatch-btn {
+    background: #fff;
+    margin-top: 30px;
+    margin-left: 5px;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    width: 150px;
+    transition: background 1s;
+    cursor: pointer;
+}
+
+.timerControls .stopwatch-btn-red {
+    border: 2px solid #C85454;
+    color: #C85454;
+}
+
+.timerControls .stopwatch-btn-yel {
+    border: 2px solid #FFC900;
+    color: #FFC900;
+}
+
+.timerControls .stopwatch-btn-gre {
+    border: 2px solid #00ABA9;
+    color: #00ABA9;
+}
+
+.timerControls .stopwatch-btn-red:hover {
+    background: #C85454;
+    border: 2px solid #C85454;
+    color: #fff;
+}
+
+.timerControls .stopwatch-btn-yel:hover {
+    background: #FFC900;
+    border: 2px solid #FFC900;
+    color: #fff;
+}
+
+.timerControls .stopwatch-btn-gre:hover {
+    background: #00ABA9;
+    border: 2px solid #00ABA9;
+    color: #fff;
+}
+
+@media only screen and (max-width: 414px) {
+    .timerBox {
+        width: 95%;
+        margin: auto;
+        font-size: 3em;
+    }
+
+    .stopwatch-btns div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .timerControls .stopwatch-btn {
+        margin-top: 20px;
+        width: 100px;
+    }
+}

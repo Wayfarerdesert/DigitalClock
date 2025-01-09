@@ -3,7 +3,7 @@ import React from "react";
 function BtnDisplay(props) {
   return (
     <>
-      <div>
+      <div className="stopwatch-btns">
         {props.status === 0 ? (
           <button
             className="stopwatch-btn stopwatch-btn-gre"
