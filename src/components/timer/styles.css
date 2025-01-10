@@ -6,24 +6,27 @@
 
 .timerBox {
     display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     padding: 0 .6em;
     font-size: 4em;
     text-align: center;
     background-color: rgba(0, 0, 0, .5);
-    background-color: #00ABA9;
+    background-color: transparent;
 }
 
 .time-input-field {
+    color: #fff;
     font-size: 1em;
     text-align: center;
     font-weight: bold;
     border: none;
+    border-radius: 5px;
+    margin: .03em;
     background-color: #00ABA9;
-}
-
-.dots {
-    width: 30%;
+    width: 120px;
+    height: 95px;
 }
 
 .time-input-field:disabled {
@@ -37,6 +40,16 @@ input[type="number"] {
     /* Removes default Firefox styling */
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    /* Hides the up and down arrows in Chrome/Brave/Edge */
+    appearance: none;
+    /* Hides the arrows in modern browsers */
+    margin: 0;
+    /* Ensures no extra margin is added */
+}
+
 .timerControls {
     display: flex;
     justify-content: center;
@@ -47,8 +60,14 @@ input[type="number"] {
 
 .stopwatch-btns {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 1em;
     margin: auto;
+}
+
+.stopwatch-btns div {
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -106,10 +125,12 @@ input[type="number"] {
         font-size: 3em;
     }
 
-    .stopwatch-btns div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .time-input-field {
+        font-size: .7em;
+        /* padding-left: .4em; */
+        margin: .05em;
+        width: 85px;
+        height: 50px;
     }
 
     .timerControls .stopwatch-btn {

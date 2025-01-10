@@ -89,7 +89,6 @@ function CountdownTimer() {
                   id="hours"
                   className="time-input-field"
                 />
-                <div className="dots">:</div>
                 <input
                   type="number"
                   value={minutes.toString().padStart(2, "0")}
@@ -100,7 +99,6 @@ function CountdownTimer() {
                   id="minutes"
                   className="time-input-field"
                 />
-                <div className="dots">:</div>
                 <input
                   type="number"
                   value={seconds.toString().padStart(2, "0")}
