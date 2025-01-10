@@ -1,20 +1,26 @@
 # React Clock Application
 
+![Countdown Timer](./public/screenshots/01-24.webp)
+
 This is a comprehensive React-based application that provides three main functionalities: a **Clock**, a **Countdown Timer**, and a **Stopwatch**. The app is built with modern web technologies and provides an intuitive user interface for tracking time in various ways.
 
 ## 🚀 Live Demo
 
-Click [here](#) to access the deployed project and test its features.
+Click [here](https://digital-clock-inky-pi.vercel.app/) to access the deployed project and test its features.
 
 ## 📋 Features
 
 ### 🕒 Clock
 
+![Countdown Timer](./public/screenshots/01-25.webp)
+
 - Displays the current time in **hours**, **minutes**, and **seconds**.
 - Shows the **day**, **date**, and **month** in a user-friendly format.
-- Automatically updates in real-time.
+- Automatically up
 
 ### ⏱️ Stopwatch
+
+![Countdown Timer](./public/screenshots/01-26.webp)
 
 - Tracks elapsed time with precision.
 - Features:
@@ -23,6 +29,8 @@ Click [here](#) to access the deployed project and test its features.
   - **Reset**: Reset the stopwatch to zero.
 
 ### ⏳ Countdown Timer
+
+![Countdown Timer](./public/screenshots/01-29.webp)
 
 - Allows users to set a specific duration in hours, minutes, and seconds.
 - Features:
@@ -47,14 +55,19 @@ Click [here](#) to access the deployed project and test its features.
 
 - **React Hooks**: Efficient state and effect management using `useState` and `useEffect`.
 
-
 ## 🚦 How to Run Locally
+
 1. **Clone the repository:**
+
    ```bash
-   git clone https://github.com/your-username/react-clock-app.git
-   cd react-clock-app
+   git clone https://github.com/Wayfarerdesert/DigitalClock.git
+   cd DigitalClock
 
-2. `npm install`
+   ```
 
-3. `npm run dev
+2. Install dependencies:
+   `npm install`
+
+3. Start the development server:
+   `npm run dev
 `
